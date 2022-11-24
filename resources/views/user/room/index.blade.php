@@ -66,7 +66,7 @@
                     <td style="text-align: center"><span>{{ $item->time_start }}</span></td>
                     <td style="text-align: center"><span>{{ $item->time_stop }}</span></td>
                     <td style="text-align: center">
-                        <span>{{ $item->getStatus($item->status)['name'] ?? "..." }}</span>
+                        <span class="{{ $item->getStatus($item->status)['class'] ?? "..." }}">{{ $item->getStatus($item->status)['name'] ?? "..." }}</span>
                     </td>
                 </tr>
             @endforeach

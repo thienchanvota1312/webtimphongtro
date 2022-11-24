@@ -9,7 +9,7 @@
                 <th style="width: 100px;">Ảnh đại diện</th>
                 <th style="width: 350px;">Thông tin</th>
                 <th>Giá</th>
-                <th>Ngày bắt đầu</th>
+                <th>Thời gian</th>
                 <th>Trạng thái</th>
             </tr>
             </thead>
@@ -19,13 +19,14 @@
                     <td>#{{ $item->id }}</td>
                     <td>
                         <div style="overflow: hidden;width: 100px;height: 100px;margin: 0 auto;position: relative;">
-                            <a href="">
+                            <a href="{{ route('get.room.detail',['id' => $item->id,'slug' => $item->slug]) }}" target="_blank">
                                 <img src="{{ pare_url_file($item->avatar) }}" alt="" style="display: block;width: 100%;height: 100%;object-fit: cover;">
                             </a>
                         </div>
                     </td>
                     <td>
-                        <a href="" style="font-size: 14px;font-weight: 500;color: #007aff;text-decoration: none"><span class="label label-danger">{{ $item->category->name ?? "[N\A]" }}</span> {{ $item->name }}</a>
+                        <a href="{{ route('get.room.detail',['id' => $item->id,'slug' => $item->slug]) }}" target="_blank"
+                           style="font-size: 14px;font-weight: 500;color: #007aff;text-decoration: none"><span class="label label-danger">{{ $item->category->name ?? "[N\A]" }}</span> {{ $item->name }}</a>
                         <p style="margin-bottom: 2px">
                             @if ($item->status != \App\Models\Room::STATUS_ACTIVE)
                                 <a href="{{ route('get_admin.room.success', $item->id) }}" class="text-success" style="font-size: 13px;text-decoration: none;font-weight: 500"><i class="fa fa-refresh"></i> Duyệt</a>
@@ -40,8 +41,11 @@
                             <p style="margin-bottom: 2px;font-size: 12px"><i class="text-danger">{{ $item->reason }}</i></p>
                         @endif
                     </td>
-                    <td>2.5 triệu / tháng</td>
-                    <td>{{ $item->created_at }}</td>
+                    <td>{{ number_format($item->price,0,',','.') }} triệu / tháng</td>
+                    <td>
+                        <p style="font-size: 14px;margin-bottom: 5px;"><span>Bắt đầu</span> <span>{{ $item->time_start }}</span></p>
+                        <p style="font-size: 14px;"><span>Kết thúc</span> <span>{{ $item->time_stop }}</span></p>
+                    </td>
                     <td>
                         <span class="{{ $item->getStatus($item->status)['class'] ?? "..." }}">{{ $item->getStatus($item->status)['name'] ?? "..." }}</span>
                     </td>

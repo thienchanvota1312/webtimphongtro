@@ -30,6 +30,19 @@
                 </div>
             </div>
             <div class="card b-base-info">
+                @if ($room->status == 2)
+                    <style>
+                        .alert-warning {
+                            color: #856404;
+                            background-color: #fff3cd;
+                            border-color: #ffeeba;
+                        }
+                    </style>
+                    <div class="alert alert-warning" role="alert">
+                        <p>Tin đăng đã hết hạn, xin vui lòng liên hệ Admin để giải quyết, hoạc click
+                            <a href="{{ route('get_user.room.pay', $room->id) }}" target="_blank" title="Gia hạn tin">tại đây</a> để gia hạn !</p>
+                    </div>
+                @endif
                 <div class="card-body breadcrumb">
                     <ol>
                         @if (isset($room->category->name))
@@ -59,22 +72,23 @@
                     </div>
                 @endif
                 <div class="post-address">Địa chỉ: {{ $room->full_address }}</div>
+
                 <div class="post-price">
-                <span class="price">
-                    <span class="mb-price">Giá cho thuê</span> <i></i> {{ number_format($room->price,0,',','.') }} đ
-                </span>
-                    <span class="acreage">
-                    <span class="mb-price">Diện tích</span> <i></i>{{ $room->area }}m<sup>2</sup>
-                </span>
-                    <span class="acreage mb-price">
-                    <span>Mã tin</span> {{ $room->id }}
-                </span>
-                    <span class="acreage mb-price">
-                    <span>Ngày cập nhật</span> {{ $room->updated_at }}
-                </span>
-                    <span class="acreage mb-price">
-                    <span>Ngày hết hạn</span> {{ $room->time_stop }}
-                </span>
+                    <span class="price">
+                        <span class="mb-price">Giá cho thuê</span> <i></i> {{ number_format($room->price,0,',','.') }} đ
+                    </span>
+                        <span class="acreage">
+                        <span class="mb-price">Diện tích</span> <i></i>{{ $room->area }}m<sup>2</sup>
+                    </span>
+                        <span class="acreage mb-price">
+                        <span>Mã tin</span> {{ $room->id }}
+                    </span>
+                        <span class="acreage mb-price">
+                        <span>Ngày cập nhật</span> {{ $room->updated_at }}
+                    </span>
+                        <span class="acreage mb-price">
+                        <span>Ngày hết hạn</span> {{ $room->time_stop }}
+                    </span>
                 </div>
             </div>
             <div class="card b-description">

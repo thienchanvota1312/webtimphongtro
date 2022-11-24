@@ -16,13 +16,18 @@ class PageHomeService
 {
     public static function index(Request $request)
     {
-        $roomHots     = RoomService::getRoomsHot($limit = 6);
-        $roomNew      = RoomService::getRoomsNew(10);
+        $roomHots    = RoomService::getRoomsHot($limit = 6);
+        $roomVipFive = RoomService::getListsRoomVip($limit = 6, [
+            'service_hot' => 5
+        ]);
+
+        $roomNew      = RoomService::getRoomsNewVip($limit =  10);
         $locationsHot = LocationService::getLocationsHot(4);
 
-        $viewData     = [
+        $viewData = [
             'roomHots'     => $roomHots,
             'roomNew'      => $roomNew,
+            'roomVipFive'  => $roomVipFive,
             'locationsHot' => $locationsHot
         ];
 

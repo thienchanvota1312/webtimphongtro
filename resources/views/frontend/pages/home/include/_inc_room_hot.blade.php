@@ -1,7 +1,7 @@
 <section class="popular-posts">
     <div class="section-title">Tin nổi bật</div>
     <div class="posts-listing style-gird">
-        @foreach($roomHots ?? [] as $item)
+        @foreach($rooms ?? [] as $item)
             <div class="col-item">
                 <div class="col-item__image">
                     <a href="{{ route('get.room.detail',['id' => $item->id,'slug' => $item->slug]) }}" class="a-img">

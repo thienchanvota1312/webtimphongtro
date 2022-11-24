@@ -90,10 +90,10 @@ class UserRechargeController extends Controller
     {
         date_default_timezone_set('Asia/Ho_Chi_Minh');
 
-        $vnp_TmnCode = "Q2KB8XR2"; //Website ID in VNPAY System
-        $vnp_HashSecret = "VICWBIDMSXXFAOSSKCHRRLYRZWKENRYG"; //Secret key
+        $vnp_TmnCode = "LLFPMKMH"; //Website ID in VNPAY System
+        $vnp_HashSecret = "IFWUNFBOCUUCLMJDKUWRAANWFGKZIGHN"; //Secret key
         $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-        $vnp_Returnurl = "http://seri-phongtro.abc:8888/user/nap-tien/post-back-atm-internet-banking";
+        $vnp_Returnurl = "http://phongtrouetk62.abc/user/nap-tien/post-back-atm-internet-banking";
         $vnp_apiUrl = "http://sandbox.vnpayment.vn/merchant_webapi/merchant.html";
 
         $startTime = date("YmdHis");
@@ -116,10 +116,7 @@ class UserRechargeController extends Controller
             $vnp_Bill_LastName = array_pop($name);
         }
 
-//        $vnp_Bill_Address=$_POST['txt_inv_addr1'];
-//        $vnp_Bill_City=$_POST['txt_bill_city'];
         $vnp_Bill_Country= 'VN';
-//        $vnp_Bill_State=$_POST['txt_bill_state'];
 
         $vnp_Inv_Phone= $vnp_Bill_Mobile;
         $vnp_Inv_Email= $vnp_Bill_Email;

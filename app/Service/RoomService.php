@@ -32,6 +32,33 @@ class RoomService
             ->get();
     }
 
+    public static function getListsRoomVip($limit = 10, $params = [])
+    {
+        $self = new self();
+        $room =  Room::whereRaw(1);
+
+        if ($service_hot =  Arr::get($params, 'service_hot'))
+            $room->where('service_hot', $service_hot);
+
+        return $room
+            ->limit($limit)
+            ->select($self->column)
+            ->orderByDesc('id')
+            ->get();
+    }
+
+    public static function getRoomsNewVip($limit = 10, $params = [])
+    {
+        $self = new self();
+        $room =  Room::whereRaw(1);
+        $room->whereBetween('service_hot', [2,4]);
+
+        return $room
+            ->select($self->column)
+            ->orderByDesc('service_hot')
+            ->paginate($limit);
+    }
+
     public static function getListsRoom($request, $params = [])
     {
         $self = new self();

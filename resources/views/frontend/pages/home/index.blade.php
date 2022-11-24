@@ -7,7 +7,7 @@
 @section('content')
     @include('components.searchbar')
     @include('components.top_location',['locationsHot' => $locationsHot ?? []])
-    @include('frontend.pages.home.include._inc_room_hot',['roomHots' => $roomHots ?? []])
+    @include('frontend.pages.home.include._inc_room_hot',['rooms' => $roomVipFive ?? []])
     <section class="grid post-category">
         <div class="wrapper">
             <div class="content">
