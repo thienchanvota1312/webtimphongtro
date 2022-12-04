@@ -52,6 +52,7 @@ class UserRoomController extends Controller
     {
         $data               = $request->except('_token', 'avatar');
         $data['created_at'] = Carbon::now();
+        $data['status'] = Room::STATUS_EXPIRED;
         $data['slug']       = Str::slug($request->name);
         $data['auth_id']    = \Auth::user()->id;
         if ($request->avatar) {

@@ -71,10 +71,10 @@
         <div class="footer-company">
             <p class="company_name"><strong>CÔNG TY TNHH LBKCORP</strong></p>
             <p class="fz-13"><strong>Tổng đài CSKH: 0917.686.101</strong></p>
-            <p class="fz-13">Copyright © 2015 - 2021 Phongtro123.com</p>
+            <p class="fz-13">Copyright © 2017 - 2022 Phongtro123.com</p>
             <p class="fz-13">Email: cskh.phongtro123@gmail.com | lienhe.phongtro123@gmail.com</p>
-            <p class="fz-13">Địa chỉ: LE-4.07, Toà nhà Lexington Residence, Số 67 Mai Chí Thọ, Phường An Phú, Quận 2, Tp. Hồ Chí Minh.</p>
-            <p class="fz-13">Giấy phép đăng ký kinh doanh số 0313588502 do Sở kế hoạch và Đầu tư thành phố Hồ Chí Minh cấp ngày 24 tháng 12 năm 2015.</p>
+            <p class="fz-13">Địa chỉ: LE-4.07, Toà nhà XXX, Số xx Nguyễn Chí Thanh, Quận Thanh Xuân, Tp. Hà Nội.</p>
+            <p class="fz-13">Giấy phép đăng ký kinh doanh số 0313588502 do Sở kế hoạch và Đầu tư thành phố Hà Nội cấp ngày 25 tháng 12 năm 1999.</p>
             <div class="certificate">
                 <a class="icon-dkbct" style="" rel="nofollow" target="_blank" href="#">
                     <img src="{{ url('images/dkbct.jpg') }}" alt="">

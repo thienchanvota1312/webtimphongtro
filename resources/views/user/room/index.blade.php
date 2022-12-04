@@ -22,7 +22,7 @@
             </li>
         </ol>
     </section>
-    <h1 class="page-title-h1">Cho thuê phòng trọ, cho thuê nhà trọ, tìm phòng trọ <a href="{{ route('get_user.room.create') }}" title="Thêm mới">Thêm tin mới</a></h1>
+    <h1 class="page-title-h1" style="display: flex;justify-content: space-between">Cho thuê phòng trọ, cho thuê nhà trọ, tìm phòng trọ <a href="{{ route('get_user.room.create') }}" title="Thêm mới" class="btn btn-sm btn-blue">Thêm tin mới</a></h1>
     <div class="table-responsive">
         <table class="table">
             <thead>
@@ -30,7 +30,7 @@
                 <th style="width: 80px;text-align: center">Mã tin</th>
                 <th style="width: 100px;">Ảnh đại diện</th>
                 <th style="width: 30%">Thông tin</th>
-                <th>Giá</th>
+                <th style="text-align: center">Giá</th>
                 <th style="text-align: center;width: 120px;">Ngày bắt đầu</th>
                 <th style="text-align: center;width: 120px;">Ngày kết thúc</th>
                 <th style="width: 120px;text-align: center">Trạng thái</th>
@@ -62,7 +62,7 @@
                             @endif
                         </p>
                     </td>
-                    <td>2.5 triệu / tháng</td>
+                    <td style="text-align: center">{{ number_format($item->price,0,',','.') }} đ</td>
                     <td style="text-align: center"><span>{{ $item->time_start }}</span></td>
                     <td style="text-align: center"><span>{{ $item->time_stop }}</span></td>
                     <td style="text-align: center">

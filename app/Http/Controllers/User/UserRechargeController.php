@@ -95,7 +95,7 @@ class UserRechargeController extends Controller
         $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
         $vnp_Returnurl = "http://phongtrouetk62.abc/user/nap-tien/post-back-atm-internet-banking";
         $vnp_apiUrl = "http://sandbox.vnpayment.vn/merchant_webapi/merchant.html";
-
+        
         $startTime = date("YmdHis");
         $expire = date('YmdHis',strtotime('+15 minutes',strtotime($startTime)));
 

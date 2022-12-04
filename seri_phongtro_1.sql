@@ -2,7 +2,7 @@
 -- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
+-- Host: localhost:3307
 -- Generation Time: Nov 21, 2022 at 06:23 AM
 -- Server version: 5.7.34
 -- PHP Version: 7.4.21

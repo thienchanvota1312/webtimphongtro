@@ -10,6 +10,7 @@
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Ngày tạo</th>
+                <th>#</th>
             </tr>
         </thead>
         <tbody>
@@ -23,6 +24,9 @@
                 <td scope="row">{{ $item->email }}</td>
                 <td scope="row">{{ $item->phone }}</td>
                 <td scope="row">{{ $item->created_at }}</td>
+                <td scope="row">
+                    <a href="{{ route('get_admin.user.update', $item->id) }}">Update</a>
+                </td>
             </tr>
         @endforeach
         </tbody>

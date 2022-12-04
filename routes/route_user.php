@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm .
- * User: trungphuna .
- * Date: 8/9/22 .
- * Time: 1:21 AM .
- */
 
 
 Route::group(['namespace' => 'User','prefix' => 'user','middleware' => 'checkLoginUser'], function (){

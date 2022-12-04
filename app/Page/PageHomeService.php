@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm .
- * User: trungphuna .
- * Date: 10/24/22 .
- * Time: 11:00 PM .
- */
 
 namespace App\Page;
 

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm .
- * User: trungphuna .
- * Date: 4/20/21 .
- * Time: 6:01 PM .
- */
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -122,7 +116,7 @@ if (!function_exists('apart_time')) {
 if (!function_exists('detect_category_expenditure')) {
     function detect_category_expenditure($id)
     {
-        $categories = (new \TrungPhuNA\Admin\Entities\Expenditure())->getCategories();
+        $categories = (new \Admin99\Admin\Entities\Expenditure())->getCategories();
         foreach ($categories as $item)
         {
             if ($item['id'] === $id) return $item;

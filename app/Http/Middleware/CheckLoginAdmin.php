@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm .
- * User: trungphuna .
- * Date: 10/27/22 .
- * Time: 4:29 PM .
- */
 
 namespace App\Http\Middleware;
 
