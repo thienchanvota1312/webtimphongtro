@@ -110,6 +110,10 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('get_admin.recharge_pay.index') }}" title="Category">Pay</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ route('get_admin.article.index') }}" title="Article">Article</a>
                     </li>
                 </ul>

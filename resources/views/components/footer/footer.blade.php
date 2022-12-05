@@ -69,7 +69,7 @@
             </div>
         </div>
         <div class="footer-company">
-            <p class="company_name"><strong>CÔNG TY TNHH LBKCORP</strong></p>
+             <p class="company_name"><strong>CÔNG TY TNHH LBKCORP</strong></p>
             <p class="fz-13"><strong>Tổng đài CSKH: 0917.686.101</strong></p>
             <p class="fz-13">Copyright © 2017 - 2022 Phongtro123.com</p>
             <p class="fz-13">Email: cskh.phongtro123@gmail.com | lienhe.phongtro123@gmail.com</p>

@@ -1,4 +1,4 @@
-<section class="section b-footer-link">
+<!-- <section class="section b-footer-link">
     <div class="col-item-3">
         <div class="link-title">
             <a href=""><strong>Cho thuê phòng trọ, nhà trọ</strong></a>
@@ -7,7 +7,7 @@
             @for ($i = 0; $i < 6; $i++)
             <li>
                 <a href="">
-                    Cho thuê phòng trọ 
+                    Cho thuê phòng trọ Hồ Chí Minh
                     <i class="la la-angle-right" aria-hidden="true"></i>
                 </a>
             </li>
@@ -22,7 +22,7 @@
             @for ($i = 0; $i < 6; $i++)
             <li>
                 <a href="">
-                    Cho thuê nhà 
+                    Cho thuê nhà Hồ Chí Minh
                     <i class="la la-angle-right" aria-hidden="true"></i>
                 </a>
             </li>
@@ -37,7 +37,7 @@
             @for ($i = 0; $i < 6; $i++)
             <li>
                 <a href="">
-                    Cho thuê căn hộ 
+                    Cho thuê căn hộ Hồ Chí Minh
                     <i class="la la-angle-right" aria-hidden="true"></i>
                 </a>
             </li>
@@ -52,11 +52,11 @@
             @for ($i = 0; $i < 6; $i++)
             <li>
                 <a href="">
-                    Tìm người ở ghép 
+                    Tìm người ở ghép Hồ Chí Minh
                     <i class="la la-angle-right" aria-hidden="true"></i>
                 </a>
             </li>
             @endfor
         </ul>
     </div>
-</section>
+</section> -->

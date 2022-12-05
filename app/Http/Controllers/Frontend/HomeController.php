@@ -13,4 +13,9 @@ class HomeController extends Controller
         $data = PageHomeService::index($request);
         return view('frontend.pages.home.index', $data);
     }
+
+    public function getServicePrice()
+    {
+        return view('frontend.pages.service.index');
+    }
 }

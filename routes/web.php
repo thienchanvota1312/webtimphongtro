@@ -32,6 +32,7 @@ Route::group(['namespace' => 'Auth'], function (){
 
 Route::group(['namespace' => 'Frontend'], function (){
     Route::get('','HomeController@index')->name('get.home');
+    Route::get('bang-gia','HomeController@getServicePrice')->name('get.service.price');
     Route::get('tim-kiem','SearchRoomController@index')->name('get.room.search');
     Route::get('chuyen-muc-{slug}-{id}','CategoryController@index')
         ->name('get.category.item')

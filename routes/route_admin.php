@@ -41,6 +41,7 @@ Route::group(['namespace' => 'Admin','prefix' => 'admin','middleware' => 'checkL
 
     Route::group(['prefix' => 'recharge'], function () {
         Route::get('','AdminRechargeController@index')->name('get_admin.recharge.index');
+        Route::get('pay','AdminRechargeController@indexPay')->name('get_admin.recharge_pay.index');
 
         Route::get('create','AdminRechargeController@create')->name('get_admin.recharge.create');
         Route::post('create','AdminRechargeController@store');

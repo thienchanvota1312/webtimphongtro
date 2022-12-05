@@ -42,7 +42,7 @@
                 <div class="row-lists">
                     <div class="form-group row-lists-3">
                         <label for="room_type">Chọn loại tin</label>
-                        <select name="room_type" id="">
+                        <select name="room_type" id="" class="js-change-type">
                             <option value="1">Tin thường ( 2.000đ / ngày )</option>
                             <option value="2">Vip 3 ( 20.000đ / ngày )</option>
                             <option value="3">Vip 2 ( 30.000đ / ngày )</option>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="form-group row-lists-3">
                         <label for="name">Số ngày</label>
-                        <select name="day" id="">
+                        <select name="day" id="day">
                             @for($i = 5 ; $i <= 20 ; $i ++)
                                 <option value="{{ $i }}">{{ $i }} ngày</option>
                             @endfor
@@ -61,6 +61,10 @@
                     <div class="form-group row-lists-3">
                         <label for="name">Ngày bắt đầu</label>
                         <input type="date" class="form-control" name="time_start">
+                    </div>
+                    <div class="form-group row-lists-3">
+                        <label for="name">Thành tiền</label>
+                        <input type="text" class="form-control" id="total">
                     </div>
                 </div>
                 <button type="submit" class="btn btn-success" style="margin-bottom: 20px;">Lưu dữ liệu</button>
@@ -72,4 +76,45 @@
 
 @push('script')
     <script src="/js/home.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $( function (){
+            $('.js-change-type').change( function (){
+                let $this = $(this);
+                let $day = $("#day option:selected").val();
+                let price = 0;
+                if ($this.val() == 1) {
+                    price = 2000;
+                } else if ($this.val() == 2) {
+                    price = 20000;
+                } else if ($this.val() == 3) {
+                    price = 30000;
+                } else if ($this.val() == 4) {
+                    price = 50000;
+                }else if ($this.val() == 5) {
+                    price = 80000;
+                }
+                $("#total").val($day * price);
+            })
+
+            $('#day').change( function (){
+                let $this = $(this);
+                let $type = $(".js-change-type option:selected").val();
+                let price = 0;
+                if ($type == 1) {
+                    price = 2000;
+                } else if ($type == 2) {
+                    price = 20000;
+                } else if ($type == 3) {
+                    price = 30000;
+                } else if ($type == 4) {
+                    price = 50000;
+                }else if ($type == 5) {
+                    price = 80000;
+                }
+                $("#total").val($this.val() * price);
+            })
+        })
+    </script>
 @endpush

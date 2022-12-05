@@ -6,16 +6,16 @@
         <div class="user-welcome js-reload-html-header">
             @if (isset(Auth::user()->name))
                 <div class="welcome-text">
-                    <a href="{{ route('get_user.profile.index') }}">Hi !</a>
-                    <a href="{{ route('get.logout') }}">{{ Auth::user()->name ?? "..." }}</a>
-                    <a href="">{{ number_format(get_data_user('web','account_balance'),0,',','.') }} đ</a>
+                    <a href="{{ route('get_user.profile.index') }}" class="text-bold text-success">{{ Auth::user()->name ?? "..." }}</a>
+                    <a >{{ number_format(get_data_user('web','account_balance'),0,',','.') }} đ</a>
                 </div>
                 <a href="{{ route('get_user.recharge.history') }}" class="text-bold text-success">Lịch sử nạp tiền</a>  <a href=""> \ </a>
-                <a href="{{ route('get_user.payment.history') }}" class="text-bold text-danger">Lịch sử thanh toán</a>
+                <a href="{{ route('get_user.payment.history') }}" class="text-bold text-danger">Lịch sử thanh toán</a>      
                 <a rel="nofollow" class="btn btn-pink btn-add-post" href="{{ route('get_user.room.index') }}">
                     Đăng tin mới
                     <i class="la la-plus-circle" aria-hidden="true"></i>
                 </a>
+                <a href="{{ route('get.logout') }}" class="btn btn-pink btn-add-post">Logout</a>
             @else
                 <a rel="nofollow" class="btn btn-blue" href="{{ route('get.login') }}">Đăng nhập</a>
                 <a rel="nofollow" class="btn btn-blue" href="{{ route('get.register') }}"> Đăng ký</a>
@@ -43,7 +43,7 @@
         <li class="navbar_item {{ \Request::route()->getName() == 'get_user.recharge.index' ? 'active' : '' }}">
             <a href="{{ route('get_user.recharge.index') }}" title="Nạp tiền">Nạp tiền</a>
         </li>
-{{--        <li class="navbar_item"><a href="#">Bảng giá</a></li>--}}
+        <li class="navbar_item {{ \Request::route()->getName() == 'get.service.price' ? 'active' : '' }}"><a href="{{ route('get.service.price') }}">Bảng giá</a></li>
     </ul>
 </nav>
 
