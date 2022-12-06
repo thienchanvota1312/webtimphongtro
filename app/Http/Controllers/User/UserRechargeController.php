@@ -120,9 +120,9 @@ class UserRechargeController extends Controller
 
         $vnp_Inv_Phone= $vnp_Bill_Mobile;
         $vnp_Inv_Email= $vnp_Bill_Email;
-        $vnp_Inv_Customer= 'Phan Trung Phú';
+        $vnp_Inv_Customer= 'Phạm Đình Thi';
         $vnp_Inv_Address= 'Hà nội';
-        $vnp_Inv_Company= 'Code thuê 94';
+        $vnp_Inv_Company= 'FPT Software';
         $vnp_Inv_Taxcode= '0102182292';
         $vnp_Inv_Type= 'I';
         $inputData = array(

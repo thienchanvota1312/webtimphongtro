@@ -28,7 +28,7 @@
                 <ul class="footer-menu">
                     <li><a rel="nofollow" href="#">Câu hỏi thường gặp</a></li>
                     <li><a rel="nofollow" href="#">Hướng dẫn đăng tin</a></li>
-                    <li><a rel="nofollow" href="#">Bảng giá dịch vụ</a></li>
+                    <li><a rel="nofollow" href= "{{ route('get.service.price') }}">Bảng giá dịch vụ</a></li>
                     <li><a rel="nofollow" href="#">Quy định đăng tin</a></li>
                     <li><a rel="nofollow" href="#">Giải quyết khiếu nại</a></li>
                 </ul>
